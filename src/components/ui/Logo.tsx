@@ -28,14 +28,24 @@ export function Logo({ theme = "dark", className }: LogoProps) {
     <span
       className={cn(
         logoFont.className,
-        "inline-flex items-baseline font-[900] tracking-[-0.04em] select-none",
+        "inline-flex items-baseline font-[900] select-none",
         className
       )}
       style={{ lineHeight: "0.8" }}
       aria-label="ETIIA"
     >
-      <span className={navy}>et</span>
-      <span className={blue}>iia.</span>
+      {/* Bloque 1: Estrategia & Tecnología (Base sólida) */}
+      <span className={cn(navy, "tracking-[-0.04em]")}>et</span>
+      
+      {/* Bloque 2: Inteligencia Humana + IA (Corazón vibrante) */}
+      <span className={blue}>
+        {/* La doble 'i' como unidad simétrica - kerning más estrecho entre ellas para unirlas visualmente */}
+        <span style={{ letterSpacing: "-0.07em" }}>i</span>
+        {/* Segunda 'i' con kerning estándar hacia la 'a' para mantener ritmo */}
+        <span style={{ letterSpacing: "-0.02em" }}>i</span>
+        {/* La 'a' y el punto validatorio final */}
+        <span className="tracking-[-0.04em]">a.</span>
+      </span>
     </span>
   );
 }
