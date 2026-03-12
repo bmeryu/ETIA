@@ -3,7 +3,7 @@ import { ContactForm } from "@/components/ui/ContactForm";
 
 export const metadata = {
     title: "Contacto",
-    description: "Agenda una sesión de exploración con los fundadores de ETIA para descubrir cómo la IA puede transformar tus KPIs.",
+    description: "Agenda una sesión de exploración con los fundadores de ETIIA para descubrir cómo la IA puede transformar tus KPIs.",
 };
 
 export default function ContactoPage() {

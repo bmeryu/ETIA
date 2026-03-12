@@ -12,10 +12,10 @@ export default function Footer() {
           {/* Logo + Desc */}
           <div className="md:col-span-1">
             <Link href="/" className="inline-block mb-4">
-              <Logo variant="diamond" theme="light" className="h-9" />
+              <Logo theme="light" className="text-4xl" />
             </Link>
             <p className="text-sm text-slate-500 leading-relaxed">
-              Transformando Data en Estrategia y Crecimiento. Consultoría en Datos e IA.
+              Transformando Data en Estrategia y Crecimiento. Consultoría en Inteligencia Artificial.
             </p>
           </div>
 
@@ -59,7 +59,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <span>© {currentYear} ETIA Consulting — Santiago, Chile 🇨🇱</span>
+          <span>© {currentYear} ETIIA Consulting — Santiago, Chile 🇨🇱</span>
           <span>Partners: AWS · Google Cloud</span>
         </div>
       </div>

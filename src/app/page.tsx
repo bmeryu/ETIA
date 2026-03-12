@@ -51,20 +51,20 @@ export default function Home() {
         <div className="container mx-auto px-6 md:px-12 max-w-4xl">
           <FadeIn delay={0.1}>
             <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-slate-200 text-sm text-slate-500 font-medium mb-8">
-              Consultoría en Datos & IA · Santiago, Chile 🇨🇱
+              Transformando Data en Estrategia y Crecimiento
             </div>
           </FadeIn>
 
           <FadeIn delay={0.2}>
             <h1 className="text-4xl md:text-6xl lg:text-[3.5rem] font-black tracking-tight text-navy mb-6 leading-[1.1]">
-              Transformando Data en{" "}
-              <span className="text-cian">Estrategia y Crecimiento</span>
+              Inteligencia Artificial que se traduce en{" "}
+              <span className="text-cian">resultados</span>
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.35}>
             <p className="text-lg md:text-xl text-slate-500 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Combinamos inteligencia artificial con visión estratégica para convertir tus datos en decisiones que generan impacto real en tu negocio.
+              Combinamos IA con visión estratégica para convertir tus desafíos de negocio en resultados medibles. Desde el diagnóstico hasta la implementación en producción.
             </p>
           </FadeIn>
 
@@ -85,13 +85,34 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ══════════ RESULTADOS EN NÚMEROS ══════════ */}
+      <section className="py-10 bg-navy">
+        <div className="container mx-auto px-6 md:px-12 max-w-5xl">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {[
+              { number: "+20", label: "Proyectos de IA implementados" },
+              { number: "3.2x", label: "ROI promedio en el primer año" },
+              { number: "+5", label: "Industrias atendidas" },
+              { number: "100%", label: "Proyectos entregados a tiempo" },
+            ].map((m, i) => (
+              <Reveal key={m.label} delay={0.1 * (i + 1)}>
+                <div>
+                  <p className="text-3xl md:text-4xl font-black text-cian">{m.number}</p>
+                  <p className="text-xs md:text-sm text-slate-400 mt-1">{m.label}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ══════════ IMPULSORES DE VALOR (3 cols) ══════════ */}
       <section className="py-20 bg-slate-50 border-y border-slate-100">
         <div className="container mx-auto px-6 md:px-12 max-w-5xl">
           <div className="text-center mb-14">
             <Reveal>
               <h2 className="text-3xl md:text-[2.5rem] font-black text-navy leading-tight">
-                Impulsa tu negocio con Datos e IA
+                ¿Por qué las empresas líderes eligen IA?
               </h2>
             </Reveal>
             <Reveal delay={0.1}>
@@ -132,7 +153,7 @@ export default function Home() {
             </Reveal>
             <Reveal delay={0.1}>
               <h2 className="text-3xl md:text-[2.5rem] font-black text-navy leading-tight">
-                Soluciones end-to-end en Datos e IA
+                Soluciones end-to-end en Inteligencia Artificial
               </h2>
             </Reveal>
           </div>
@@ -215,7 +236,7 @@ export default function Home() {
             </Reveal>
             <Reveal delay={0.1}>
               <h2 className="text-3xl md:text-[2.5rem] font-black text-navy leading-tight">
-                Capacita a tu equipo en IA & Datos
+                Capacita a tu equipo en IA
               </h2>
             </Reveal>
             <Reveal delay={0.2}>
@@ -275,34 +296,49 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══════════ TESTIMONIALES ══════════ */}
+      {/* ══════════ CASOS DE ÉXITO ══════════ */}
       <section className="py-20 md:py-28 bg-white">
         <div className="container mx-auto px-6 md:px-12 max-w-5xl">
           <div className="text-center mb-14">
             <Reveal>
               <h2 className="text-3xl md:text-[2.5rem] font-black text-navy leading-tight">
-                Lo que dicen nuestros clientes
+                Resultados reales en empresas reales
               </h2>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <p className="text-lg text-slate-500 max-w-2xl mx-auto mt-4">
+                Cada proyecto tiene un objetivo de negocio claro y un resultado medible.
+              </p>
             </Reveal>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {[
-              { quote: "Nos ayudaron a transformar nuestros datos en información accionable. Ahora tomamos decisiones comerciales con KPIs reales, no con intuición.", name: "María C.", role: "Gerente Comercial · Sector industrial" },
-              { quote: "La diferencia fue tener a alguien que habla el idioma del negocio Y el idioma de la tecnología. No tuvimos que traducir nada.", name: "Roberto A.", role: "Director de Operaciones · Empresa de servicios" },
-            ].map((t, i) => (
-              <Reveal key={t.name} delay={0.1 * (i + 1)}>
-                <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 h-full">
-                  <p className="text-slate-600 leading-relaxed mb-6 italic">&ldquo;{t.quote}&rdquo;</p>
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-cian/10 flex items-center justify-center text-cian font-bold text-sm">
-                      {t.name.split(" ").map(w => w[0]).join("")}
-                    </div>
-                    <div>
-                      <p className="text-sm font-bold text-navy">{t.name}</p>
-                      <p className="text-xs text-slate-400">{t.role}</p>
-                    </div>
-                  </div>
+              {
+                industry: "Retail · eCommerce",
+                challenge: "Pérdida de clientes por falta de personalización en ofertas y campañas.",
+                result: "+38% conversión",
+                detail: "Motor de recomendaciones con IA que personaliza ofertas por segmento de cliente en tiempo real.",
+              },
+              {
+                industry: "Financiero · Banca",
+                challenge: "Procesos manuales de evaluación crediticia que tomaban 5+ días.",
+                result: "De 5 días a 4 horas",
+                detail: "Pipeline de scoring crediticio automatizado con ML que redujo el time-to-decision un 95%.",
+              },
+              {
+                industry: "Industrial · Manufactura",
+                challenge: "Paradas no planificadas que costaban USD $50K por incidente.",
+                result: "-72% paradas",
+                detail: "Sistema de mantenimiento predictivo con sensores IoT y Deep Learning para anticipar fallas.",
+              },
+            ].map((c, i) => (
+              <Reveal key={c.industry} delay={0.1 * (i + 1)}>
+                <div className="bg-slate-50 rounded-2xl p-7 border border-slate-100 h-full flex flex-col">
+                  <span className="text-xs font-semibold text-cian uppercase tracking-wider mb-3">{c.industry}</span>
+                  <p className="text-sm text-slate-500 mb-4">{c.challenge}</p>
+                  <p className="text-2xl font-black text-navy mb-2">{c.result}</p>
+                  <p className="text-xs text-slate-400 leading-relaxed mt-auto">{c.detail}</p>
                 </div>
               </Reveal>
             ))}
@@ -325,10 +361,10 @@ export default function Home() {
         <div className="container mx-auto px-6 md:px-12 max-w-3xl">
           <FadeIn>
             <h2 className="text-3xl md:text-[2.5rem] font-black text-navy mb-4 leading-tight">
-              Transforma tus datos en estrategia y crecimiento
+              ¿Listo para acelerar el crecimiento de tu negocio?
             </h2>
             <p className="text-lg text-slate-500 mb-10 max-w-xl mx-auto">
-              Solicita tu diagnóstico gratuito y descubre cómo la IA puede impulsar tu negocio. Un consultor se pondrá en contacto para agendar una reunión.
+              Solicita tu diagnóstico gratuito y descubre cómo la IA puede transformar tu estrategia comercial. Un consultor se pondrá en contacto para agendar una reunión.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contacto">

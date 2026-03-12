@@ -11,15 +11,15 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | ETIA",
-    default: "ETIA | Inteligencia Artificial Accionable",
+    template: "%s | ETIIA",
+    default: "ETIIA | Consultoría en Inteligencia Artificial",
   },
-  description: "Consultora de Inteligencia Artificial que une Estrategia de Negocio e Ingeniería Robusta. Convertimos datos en retorno medible.",
+  description: "Consultoría en Inteligencia Artificial en Chile. Transformamos data en estrategia y crecimiento para empresas que buscan resultados medibles con IA.",
   openGraph: {
-    title: "ETIA | Inteligencia Artificial Accionable",
-    description: "Consultora de Inteligencia Artificial que une Estrategia de Negocio e Ingeniería Robusta.",
+    title: "ETIIA | Consultoría en Inteligencia Artificial",
+    description: "Consultoría en Inteligencia Artificial. Transformamos data en estrategia y crecimiento.",
     url: "https://etia.cl",
-    siteName: "ETIA",
+    siteName: "ETIIA",
     locale: "es_CL",
     type: "website",
   },

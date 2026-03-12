@@ -47,7 +47,7 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
         <Link href="/" className="group">
-          <Logo variant="diamond" theme="dark" className="h-12" />
+          <Logo theme="dark" className="text-[2.5rem] md:text-5xl" />
         </Link>
 
         {/* Desktop Nav */}

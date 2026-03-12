@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 
 export const metadata = {
-    title: "Servicios | ETIA",
+    title: "Servicios | ETIIA",
     description: "Diagnóstico, implementación y adopción de IA. Un proceso claro de 3 pasos para transformar tu negocio con datos.",
 };
 

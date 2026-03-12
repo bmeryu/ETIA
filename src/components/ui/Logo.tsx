@@ -1,27 +1,41 @@
 "use client";
 
-import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { Outfit } from "next/font/google";
+
+// Outfit perfectly matches the reference: flat 't', circular dots, geometric 'e' and 'a'.
+const logoFont = Outfit({ 
+  subsets: ["latin"], 
+  weight: ["800", "900"], 
+  display: "swap" 
+});
 
 interface LogoProps {
-  variant?: "default" | "diamond" | "pulse";
   theme?: "dark" | "light";
   className?: string;
 }
 
 /**
- * ETIA Logo — Uses the actual brand image.
- * Navy "et" + blue "i" (with blue dot) + blue "a" + trailing blue dot.
+ * ETIIA Logo — CSS-rendered with exact geometric font matching reference.
+ * Navy "et" + bright blue "iia."
  */
-export function Logo({ variant = "default", theme = "dark", className }: LogoProps) {
+export function Logo({ theme = "dark", className }: LogoProps) {
+  // Exact colors from the user's logo reference image
+  const navy = theme === "dark" ? "text-[#121626]" : "text-white";
+  const blue = "text-[#177aff]"; 
+
   return (
-    <Image
-      src="/logo-etia.png"
-      alt="ETIA — Transformando Data en Estrategia y Crecimiento"
-      width={160}
-      height={50}
-      className={cn("h-10 w-auto", theme === "light" ? "brightness-0 invert" : "", className)}
-      priority
-    />
+    <span
+      className={cn(
+        logoFont.className,
+        "inline-flex items-baseline font-[900] tracking-[-0.04em] select-none",
+        className
+      )}
+      style={{ lineHeight: "0.8" }}
+      aria-label="ETIIA"
+    >
+      <span className={navy}>et</span>
+      <span className={blue}>iia.</span>
+    </span>
   );
 }

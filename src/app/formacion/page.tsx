@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/Button";
 import { Reveal, FadeIn } from "@/components/ui/Reveal";
 
 export const metadata = {
-  title: "Formación | ETIA",
-  description: "Capacitaciones in-company en IA Generativa, Datos y Dashboards. Programas adaptados a tu organización.",
+  title: "Formación | ETIIA",
+  description: "Capacitaciones in-company en IA Generativa y Automatización Inteligente. Programas adaptados a tu organización.",
 };
 
 const programas = [
@@ -50,7 +50,7 @@ export default function FormacionPage() {
         </FadeIn>
         <FadeIn delay={0.2}>
           <h1 className="text-4xl md:text-[2.8rem] font-black text-navy mb-6 leading-tight">
-            Capacita a tu equipo en IA & Datos
+            Capacita a tu equipo en IA
           </h1>
         </FadeIn>
         <FadeIn delay={0.35}>
